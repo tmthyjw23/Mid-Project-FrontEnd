@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Hero from './components/hero';
 // import Biodata from './components/Biodata';
 // import Skills from './components/Skills';
 // import Projects from './components/Projects';
@@ -11,7 +12,7 @@ function App() {
 
         {/* Sections */}
         <section id="hero" className="h-screen flex items-center justify-center text-5xl font-bold">
-            Hero Section
+            <Hero />
         </section>
 
         <section id="biodata" className="h-screen flex items-center justify-center text-5xl font-bold">

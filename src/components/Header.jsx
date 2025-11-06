@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 ${
             scrolled
             ? "backdrop-blur-2xl bg-white/10 shadow-lg"
             : "backdrop-blur-sm bg-white/5"
