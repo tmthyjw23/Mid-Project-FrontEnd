@@ -1,0 +1,9 @@
+{
+    "header": [
+    { "id": "1", "nav": "Hero", "href": "#hero" },
+    { "id": "2", "nav": "Biodata", "href": "#biodata" },
+    { "id": "3", "nav": "Skills", "href": "#skills" },
+    { "id": "4", "nav": "Projects", "href": "#projects" },
+    { "id": "5", "nav": "Footer", "href": "#footer" }
+    ]
+}
