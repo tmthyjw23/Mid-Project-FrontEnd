@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section
         id="hero"
-        className="h-screen flex items-center justify-start px-32 text-white"
+        className="h-screen flex items-center justify-center px-32 text-white "
         >
         <div className="flex items-center gap-16 opacity-0 animate-fadeInUp">
             
@@ -27,11 +27,11 @@ const Hero = () => {
 
             {/* Text */}
             <div>
-            <h1 className="text-6xl font-bold leading-tight">
+            <h1 className=" font-mono text-6xl font-bold leading-tight">
                 Weley, <br /> Timothy Jordy
             </h1>
 
-            <h2 className="text-2xl mt-4 text-white/70 font-medium">
+            <h2 className="font-mono text-sky-400 text-lg mb-6 mt-4  font-medium">
                 Software Engineer
             </h2>
 

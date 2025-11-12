@@ -2,30 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Header = () => {
-    const [scrolled, setScrolled] = useState(false);
-    const [navItems, setNavItems] = useState([]);
-
-    // Detect scrolling untuk efek sticky dan blur
-    useEffect(() => {
-        const handleScroll = () => {
-        setScrolled(window.scrollY > 30);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    // Fetch JSON dari local file
-    useEffect(() => {
-        axios
-        .get("/db.json")
-        .then((res) => {
-            console.log("RAW DATA:", res.data);
-            setNavItems(res.data?.header || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
-
+const Header = ({ scrolled, navItems}) => {
     return (
         <header
         className={`sticky top-0 left-0 w-full z-50 transition-all duration-500 ${
