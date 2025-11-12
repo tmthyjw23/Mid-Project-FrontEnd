@@ -1,0 +1,47 @@
+{
+    "header": [
+    { "id": "1", "nav": "Hero", "href": "#hero" },
+    { "id": "2", "nav": "Biodata", "href": "#biodata" },
+    { "id": "3", "nav": "Skills", "href": "#skills" },
+    { "id": "4", "nav": "Projects", "href": "#projects" },
+    { "id": "5", "nav": "Footer", "href": "#footer" }
+    ],
+
+    "hero": [
+        {
+            "name": "Weley, Timothy Jordy",
+            "title": "Software Engineer",
+            "text": "Passionate about crafting clean, modern, and efficient digital experiences. Specializing in building responsive interfaces, solving complex problems, and delivering scalable solutions with a strong focus on user-centered design.",
+            "avatar": "./avatar1.jpg"
+        }
+    ], 
+
+    "biodata" : [
+        {
+            "imageSrc": "./profile.jpg",
+            "name": "Timothy Jordy Weley",
+            "university": "UNKLAB / Computer Science",
+            "nim": "105022410005",
+            "major": "Informatics",
+            "domicile": "Manado, Indonesia",
+            "email": "tmthyjw@gmail.com",
+            "description": "Saya, Timothy Jordy Weley, mahasiswa Informatika yang memiliki minat dalam pengembangan web, kecerdasan buatan (AI), serta desain grafis. Bersemangat untuk terus belajar dan menggabungkan kreativitas dengan keahlian teknis dalam setiap proyek."
+        }
+    ],
+    "skills": [
+        { "name": "Python", "percent": 60 },
+        { "name": "HTML", "percent": 95 },
+        { "name": "CSS", "percent": 90 },
+        { "name": "JavaScript", "percent": 80 },
+        { "name": "React", "percent": 40 },
+        { "name": "Next.js", "percent": 15 },
+        { "name": "Figma", "percent": 50 },
+        { "name": "Prompting", "percent": 95 }
+    ],
+    
+    "projects": [
+    { "id": "1", "src": "https://frontend-wine-delta-99.vercel.app/", "href": "https://frontend-wine-delta-99.vercel.app/", "title" : "UVICS's Websites", "description": "being part of UVICS's Websites development team." },
+    { "id": "2", "src": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "href": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "title" : "WebDesign Courses Project", "description": "Enter a Random Username And Password." }
+    ]
+}
+
