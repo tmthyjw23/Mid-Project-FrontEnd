@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../App.css"; // kalau kamu ingin letakkan animasi custom seperti fade-in di sini
-import axios from "axios";
 
-const Skills = () => {
-    const [skills, setSkills] = useState([]);
-
-    useEffect(() => {
-        axios
-            .get("/db.json")
-            .then((res) => {
-                setSkills(res.data?.skills || []);
-            })
-            .catch((err) => console.log("ERROR:", err));
-    }, []);
+const Skills = ({ skills, title }) => {
 
     return (
         <section
@@ -21,7 +10,7 @@ const Skills = () => {
         >
         {/* Title */}
         <h1 className="font-mono text-3xl md:text-4xl uppercase tracking-widest text-sky-400 mb-12">
-            [ Skills ]
+            {title.find(t => t.id === 'title1')?.text}
         </h1>
 
         {/* Skills grid */}

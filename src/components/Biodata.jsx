@@ -1,16 +1,6 @@
 import React, { useEffect, useState} from "react";
 import axios from "axios";
-const Biodata = () => {
-    const [biodata, setBiodata] = useState([]);
-
-    useEffect(() => {
-        axios
-        .get("/db.json")
-        .then((res) => {
-            setBiodata(res.data?.biodata || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
+const Biodata = ({ biodata }) => {
 
     return (
         <> 

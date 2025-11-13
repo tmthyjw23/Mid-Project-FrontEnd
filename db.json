@@ -1,4 +1,5 @@
 {
+    
     "header": [
     { "id": "1", "nav": "Hero", "href": "#hero" },
     { "id": "2", "nav": "Biodata", "href": "#biodata" },
@@ -6,7 +7,7 @@
     { "id": "4", "nav": "Projects", "href": "#projects" },
     { "id": "5", "nav": "Footer", "href": "#footer" }
     ],
-
+    
     "hero": [
         {
             "name": "Weley, Timothy Jordy",
@@ -28,7 +29,13 @@
             "description": "Saya, Timothy Jordy Weley, mahasiswa Informatika yang memiliki minat dalam pengembangan web, kecerdasan buatan (AI), serta desain grafis. Bersemangat untuk terus belajar dan menggabungkan kreativitas dengan keahlian teknis dalam setiap proyek."
         }
     ],
-    "skills": [
+
+    "title" : [
+        {"id": "title1", "text": "[ Skills ]" },
+        {"id": "title2", "text": "Projects" }
+    ],
+
+    "skills": [ 
         { "name": "Python", "percent": 60 },
         { "name": "HTML", "percent": 95 },
         { "name": "CSS", "percent": 90 },
@@ -42,6 +49,17 @@
     "projects": [
     { "id": "1", "src": "https://frontend-wine-delta-99.vercel.app/", "href": "https://frontend-wine-delta-99.vercel.app/", "title" : "UVICS's Websites", "description": "being part of UVICS's Websites development team." },
     { "id": "2", "src": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "href": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "title" : "WebDesign Courses Project", "description": "Enter a Random Username And Password." }
-    ]
+    ], 
+
+    "footer": {
+        "name": "Timothy Jordy Weley",
+        "role": "Software Engineer",
+        "socials": [
+            { "github": "https://github.com/tmthyjw23" },
+            { "linkedin": "https://linkedin.com/in/timothy-jordy-weley" },
+            { "instagram": "https://instagram.com/tmthyjw_" },
+            { "email": "mailto:tmthyjw@gmail.com" }
+        ]
+    }
 }
 
