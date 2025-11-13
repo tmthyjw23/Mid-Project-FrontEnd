@@ -26,7 +26,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("/api")
+            .get("http://localhost:3000/title")
             .then((res) => {
                 setTitle(res.data || []);
             })
@@ -35,7 +35,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3001/header")
+            .get("http://localhost:3000/header")
             .then((res) => {
                 setNavItems(res.data || []);
             })
@@ -44,7 +44,7 @@ function App() {
     
     useEffect(() => {
         axios
-        .get("http://localhost:3001/hero")
+        .get("http://localhost:3000/hero")
         .then((res) => {
             setHeroData(res.data || []);
         })
@@ -53,7 +53,7 @@ function App() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:3001/biodata")
+        .get("http://localhost:3000/biodata")
         .then((res) => {
             setBiodata(res.data || []);
         })
@@ -62,7 +62,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3001/skills")
+            .get("http://localhost:3000/skills")
             .then((res) => {
                 setSkills(res.data || []);
             })
@@ -71,7 +71,7 @@ function App() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:3001/projects")
+        .get("http://localhost:3000/projects")
         .then((res) => {
             setProjects(res.data || []);
         })
