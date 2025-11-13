@@ -15,6 +15,7 @@ function App() {
     const [heroData, setHeroData] = useState([]);
     const [skills, setSkills] = useState([]);
     const [projects, setProjects] = useState([]);
+    const [footerData, setFooterData] = useState({});
 
     useEffect(() => {
         const handleScroll = () => {
@@ -78,6 +79,15 @@ function App() {
         .catch((err) => console.log("ERROR:", err));
     }, []);
 
+    useEffect(() => {
+        axios
+        .get("http://localhost:3000/footer")
+        .then((res) => {
+            setFooterData(res.data || []);
+        })
+        .catch((err) => console.log("ERROR:", err));
+    }, []);
+
 
     return (
         <div className="min-h-screen bg-linear-to-br from-white-900 via-gray-800 to-black text-white">
@@ -86,7 +96,7 @@ function App() {
             <Biodata biodata={biodata} />
             <Skills skills={skills} title={title} />
             <Projects projects={projects} title={title} />
-            <Footer />
+            <Footer footerData={footerData} />
         </div>
     );
 }

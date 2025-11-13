@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { footer } from "framer-motion/client";
 
-const Footer = () => {
+const Footer = ({ footerData }) => {
     const ref = useRef(null);
     const controls = useAnimation();
     const [isVisible, setIsVisible] = useState(false);
@@ -52,19 +53,19 @@ const Footer = () => {
         >
             {/* Name & Role */}
             <h1 className="text-2xl md:text-3xl font-semibold tracking-tight bg-linear-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            Timothy Jordy Weley
+            {footerData?.name}
             </h1>
             <p className="text-sm md:text-base text-gray-400 mt-2">
-            Software Engineer
+            {footerData?.role}
             </p>
 
             {/* Social Links */}
             <div className="flex gap-6 mt-6">
-            {[
-                { Icon: FaGithub, link: "https://github.com/tmthyjw23" },
-                { Icon: FaLinkedin, link: "https://www.linkedin.com/in/timothy-jordy-weley-115260349?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-                { Icon: FaInstagram, link: "https://instagram.com/tmthyjw_" },
-                { Icon: FaEnvelope, link: "mailto:tmthyjw@gmail.com" },
+            {footerData.socials && [
+                { Icon: FaGithub, link: footerData.socials[0]?.github },
+                { Icon: FaLinkedin, link: footerData.socials[1]?.linkedin },
+                { Icon: FaInstagram, link: footerData.socials[2]?.instagram },
+                { Icon: FaEnvelope, link: footerData.socials[3]?.email },
             ].map(({ Icon, link }, index) => (
                 <motion.a
                 key={index}
