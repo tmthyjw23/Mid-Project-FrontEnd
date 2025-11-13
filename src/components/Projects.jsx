@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Projects = () => {
-    const [projects, setProjects] = useState([]);
+const Projects = ({ projects, title }) => {
     
-    useEffect(() => {
-        axios
-        .get("/db.json")
-        .then((res) => {
-            setProjects(res.data?.projects || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
 
     return (
-        <div id='projects' className='min-h-screen items-center  px-6  text-white bg-transparent bg-grid scroll-mt-24 animate-fadeInUp'>
-            <h2 className="text-3xl font-bold text-center mb-15">Projects</h2>
+        <div id="projects" className='min-h-screen items-center  px-6  text-white bg-transparent bg-grid scroll-mt-24 animate-fadeInUp'>
+            <h2 className="text-3xl font-bold text-center mb-15">{title.find(t => t.id === 'title2')?.text}</h2>
             <div className="gap-8  flex justify-center">
                 {projects.map(({id, title, src, href, description}) => (
                     <div key={id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">

@@ -1,17 +1,5 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-
-const Hero = () => {
-    const [heroData, setHeroData] = useState([]);
-
-    useEffect(() => {
-        axios
-        .get("/db.json")
-        .then((res) => {
-            setHeroData(res.data?.hero || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
+import React from "react";
+const Hero = ({ heroData }) => {
 
     return (
         <>
