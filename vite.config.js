@@ -8,4 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  server: {
+    allowedHosts: [
+      'gaslit-deadra-unrequisitely.ngrok-free.dev' // Masukkan domain dari error tadi
+    ]
+  }
 })
