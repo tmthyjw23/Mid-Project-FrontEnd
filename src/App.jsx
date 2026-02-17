@@ -27,7 +27,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:3000/title")
+            .get()
             .then((res) => {
                 setTitle(res.data || []);
             })

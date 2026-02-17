@@ -48,7 +48,8 @@
     
     "projects": [
     { "id": "1", "src": "https://frontend-wine-delta-99.vercel.app/", "href": "https://frontend-wine-delta-99.vercel.app/", "title" : "UVICS's Websites", "description": "being part of UVICS's Websites development team." },
-    { "id": "2", "src": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "href": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "title" : "WebDesign Courses Project", "description": "Enter a Random Username And Password." }
+    { "id": "2", "src": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "href": "http://tmthyjw23.github.io/midWebDesign/Loginpage/", "title" : "WebDesign Courses Project", "description": "Enter a Random Username And Password." },
+    { "id": "3", "src": "https://tmthyjw23.github.io/SmartGabah/", "href": "https://tmthyjw23.github.io/SmartGabah/", "title" : "Smart Gabah", "description": "mini HTML application for An integrated system designed to regulate the rice market by establishing an automated Government Purchase Price (HPP) mechanism and coordinating Market Operations. This platform ensures price stability through data-driven interventions and strategic supply management." }
     ], 
 
     "footer": {
