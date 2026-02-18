@@ -26,68 +26,19 @@ function App() {
     }, []);
 
     useEffect(() => {
-        axios
-            .get()
-            .then((res) => {
-                setTitle(res.data || []);
+        axios.get('/db.json')
+            .then(res => {
+                const data = res.data;
+                setTitle(data.title || []);
+                setNavItems(data.header || []);
+                setBiodata(data.biodata || []);
+                setHeroData(data.hero || []);
+                setSkills(data.skills || []);
+                setProjects(data.projects || []);
+                setFooterData(data.footer || {});
             })
-            .catch((err) => console.log("ERROR:", err));
+            .catch(err => console.log("ERROR:", err));
     }, []);
-
-    useEffect(() => {
-        axios
-            .get("http://localhost:3000/header")
-            .then((res) => {
-                setNavItems(res.data || []);
-            })
-            .catch((err) => console.log("ERROR:", err));
-    }, []);
-    
-    useEffect(() => {
-        axios
-        .get("http://localhost:3000/hero")
-        .then((res) => {
-            setHeroData(res.data || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
-
-    useEffect(() => {
-        axios
-        .get("http://localhost:3000/biodata")
-        .then((res) => {
-            setBiodata(res.data || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
-
-    useEffect(() => {
-        axios
-            .get("http://localhost:3000/skills")
-            .then((res) => {
-                setSkills(res.data || []);
-            })
-            .catch((err) => console.log("ERROR:", err));
-    }, []);
-
-    useEffect(() => {
-        axios
-        .get("http://localhost:3000/projects")
-        .then((res) => {
-            setProjects(res.data || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
-
-    useEffect(() => {
-        axios
-        .get("http://localhost:3000/footer")
-        .then((res) => {
-            setFooterData(res.data || []);
-        })
-        .catch((err) => console.log("ERROR:", err));
-    }, []);
-
 
     return (
         <div className="min-h-screen bg-linear-to-br from-white-900 via-gray-800 to-black text-white">
